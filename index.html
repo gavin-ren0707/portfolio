@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>建宇 任｜短影音剪輯作品集</title>
+  <meta name="description" content="短影音剪輯｜口播內容剪輯、字幕字卡、音效節奏、版型一致化。IG 私訊 @lovenaga_ado 合作。" />
+  <style>
+    :root{
+      --bg:#0b0c10;
+      --panel:#11131a;
+      --text:#eef0f6;
+      --muted:#b7bccb;
+      --line:rgba(255,255,255,.10);
+      --brand:#7c5cff;
+      --brand2:#35d1ff;
+      --shadow: 0 18px 60px rgba(0,0,0,.45);
+      --radius:16px;
+      --max:1080px;
+      --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+              "Noto Sans TC","PingFang TC","Microsoft JhengHei", Arial, sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:var(--font);
+      background: radial-gradient(1200px 800px at 20% 0%, rgba(124,92,255,.18), transparent 50%),
+                  radial-gradient(1000px 700px at 90% 10%, rgba(53,209,255,.14), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 80px}
+    header{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0 6px;
+      position:sticky; top:0;
+      backdrop-filter: blur(10px);
+      background: linear-gradient(to bottom, rgba(11,12,16,.85), rgba(11,12,16,.45));
+      border-bottom:1px solid rgba(255,255,255,.06);
+      z-index:10;
+    }
+    .brand{
+      display:flex; gap:10px; align-items:center;
+      font-weight:700;
+      letter-spacing:.2px;
+    }
+    .dot{
+      width:12px; height:12px; border-radius:99px;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      box-shadow: 0 0 0 6px rgba(124,92,255,.12);
+    }
+    nav{display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end}
+    nav a{
+      text-decoration:none; color:var(--muted);
+      padding:8px 10px; border-radius:12px;
+    }
+    nav a:hover{background:rgba(255,255,255,.06); color:var(--text)}
+    .hero{
+      margin-top:22px;
+      padding:28px;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      box-shadow: var(--shadow);
+    }
+    .hero h1{
+      margin:0 0 10px;
+      font-size: clamp(28px, 4.2vw, 44px);
+      line-height:1.15;
+      letter-spacing:-.4px;
+    }
+    .hero p{margin:0 0 18px; color:var(--muted); font-size: 16px}
+    .btns{display:flex; gap:12px; flex-wrap:wrap; margin:10px 0 10px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:10px;
+      padding:12px 14px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.14);
+      text-decoration:none;
+      font-weight:650;
+    }
+    .btn.primary{
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      border:none;
+      color:#0b0c10;
+    }
+    .btn.secondary{
+      background: rgba(255,255,255,.04);
+      color:var(--text);
+    }
+    .hint{color:var(--muted); font-size:13px; margin-top:8px}
+    .signals{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap:10px;
+    }
+    .chip{
+      padding:10px 12px;
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:14px;
+      background: rgba(0,0,0,.18);
+      color:var(--text);
+      font-size:13px;
+    }
+    section{margin-top:34px}
+    .sec-title{
+      display:flex; align-items:flex-end; justify-content:space-between; gap:16px;
+      margin:0 0 12px;
+    }
+    .sec-title h2{margin:0; font-size:22px}
+    .sec-title .sub{margin:0; color:var(--muted); font-size:14px}
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap:14px;
+    }
+    .card{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background: rgba(255,255,255,.03);
+      overflow:hidden;
+    }
+    .thumb{
+      aspect-ratio: 9 / 16;
+      background: linear-gradient(135deg, rgba(124,92,255,.25), rgba(53,209,255,.20));
+      display:flex; align-items:center; justify-content:center;
+      color:rgba(255,255,255,.65);
+      font-weight:700;
+      font-size:14px;
+    }
+    .card-body{padding:12px 12px 14px}
+    .title{font-weight:750; margin:0 0 8px; font-size:15px}
+    .tags{display:flex; gap:8px; flex-wrap:wrap}
+    .tag{
+      font-size:12px;
+      color:var(--muted);
+      padding:6px 8px;
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:999px;
+      background: rgba(0,0,0,.16);
+    }
+    .card a.open{
+      display:inline-block;
+      margin-top:10px;
+      color:var(--text);
+      text-decoration:none;
+      font-weight:650;
+      opacity:.92;
+    }
+    .card a.open:hover{opacity:1; text-decoration:underline}
+    .two{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:14px;
+    }
+    .list{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background: rgba(255,255,255,.03);
+      padding:16px;
+    }
+    .list ul{margin:10px 0 0; padding-left:18px; color:var(--muted)}
+    .steps{display:grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap:14px}
+    .step{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background: rgba(255,255,255,.03);
+      padding:16px;
+    }
+    .step .n{
+      width:34px; height:34px; border-radius:12px;
+      display:flex; align-items:center; justify-content:center;
+      background: rgba(124,92,255,.18);
+      border:1px solid rgba(124,92,255,.35);
+      font-weight:800;
+      margin-bottom:10px;
+    }
+    footer{margin-top:46px; color:var(--muted); font-size:13px; border-top:1px solid rgba(255,255,255,.08); padding-top:18px}
+
+    @media (max-width: 980px){
+      .grid{grid-template-columns: repeat(2, minmax(0, 1fr));}
+      .two{grid-template-columns: 1fr}
+      .signals{grid-template-columns: repeat(2, minmax(0, 1fr));}
+      .steps{grid-template-columns: 1fr}
+    }
+    @media (max-width: 560px){
+      nav{display:none}
+      .grid{grid-template-columns: 1fr}
+      .signals{grid-template-columns: 1fr}
+      .hero{padding:20px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand"><span class="dot"></span>建宇 任｜短影音剪輯</div>
+      <nav>
+        <a href="#works">精選作品</a>
+        <a href="#services">服務內容</a>
+        <a href="#process">合作流程</a>
+        <a href="#contact">聯絡合作</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="top">
+        <h1>短影音剪輯｜把口播內容剪成「看得完、想私訊」的節奏</h1>
+        <p>
+          提供 Reels / TikTok / Shorts 剪輯：Hook 設計、字幕字卡、音效節奏、版型一致化。<br>
+          題材涵蓋美業、餐飲、生活 IP、重機等口播內容，協助你穩定輸出一致風格。
+        </p>
+
+        <div class="btns">
+          <a class="btn primary" href="https://www.instagram.com/lovenaga_ado/" target="_blank" rel="noreferrer">IG 私訊 @lovenaga_ado 合作</a>
+          <a class="btn secondary" href="#works">查看精選作品</a>
+        </div>
+        <div class="hint">私訊建議附：題材方向、影片長度、預計頻率、參考帳號／範例。</div>
+
+        <div class="signals">
+          <div class="chip">多題材口播案例（美業／餐飲／生活 IP／重機）</div>
+          <div class="chip">可配合週更 / 月更長期合作</div>
+          <div class="chip">交付格式：9:16 / 1:1 / 16:9</div>
+          <div class="chip">字幕字卡版型一致化</div>
+          <div class="chip">一般案件 1 個工作天內交付（依素材完整度與片量調整）</div>
+          <div class="chip">可先試剪 1 支（確認風格與流程後再長期配合）</div>
+        </div>
+      </section>
+
+      <section id="works">
+        <div class="sec-title">
+          <div>
+            <h2>精選作品（6）</h2>
+            <p class="sub">點「開啟」會到 IG/TikTok 原影片（你也可以改成內頁嵌入）。</p>
+          </div>
+        </div>
+
+        <div class="grid">
+          <!-- 精選 1 -->
+          <article class="card">
+            <div class="thumb">替換縮圖 9:16</div>
+            <div class="card-body">
+              <p class="title">美業口播短影音剪輯｜TikTok</p>
+              <div class="tags">
+                <span class="tag">TikTok</span><span class="tag">口播</span><span class="tag">Hook</span>
+              </div>
+              <a class="open" href="https://vt.tiktok.com/ZSHsgCjABXG39-3Ea9X/" target="_blank" rel="noreferrer">開啟 →</a>
+            </div>
+          </article>
+
+          <!-- 精選 2 -->
+          <article class="card">
+            <div class="thumb">替換縮圖 9:16</div>
+            <div class="card-body">
+              <p class="title">美業口播短影音剪輯（案例）｜TikTok</p>
+              <div class="tags">
+                <span class="tag">TikTok</span><span class="tag">口播</span><span class="tag">字幕</span>
+              </div>
+              <a class="open" href="https://www.tiktok.com/@sallyhu.health/video/7660549815209643285" target="_blank" rel="noreferrer">開啟 →</a>
+            </div>
+          </article>
+
+          <!-- 精選 3 -->
+          <article class="card">
+            <div class="thumb">替換縮圖 9:16</div>
+            <div class="card-body">
+              <p class="title">生活 IP 口播短影音剪輯｜Reels（IG）</p>
+              <div class="tags">
+                <span class="tag">IG</span><span class="tag">口播</span><span class="tag">故事結構</span>
+              </div>
+              <a class="open" href="https://www.instagram.com/reel/DK9cjhXSGfI/" target="_blank" rel="noreferrer">開啟 →</a>
+            </div>
+          </article>
+
+          <!-- 精選 4 -->
+          <article class="card">
+            <div class="thumb">替換縮圖 9:16</div>
+            <div class="card-body">
+              <p class="title">重機口播短影音剪輯｜Reels（IG）</p>
+              <div class="tags">
+                <span class="tag">IG</span><span class="tag">口播</span><span class="tag">節奏</span>
+              </div>
+              <a class="open" href="https://www.instagram.com/reel/DPDytrTD6bH/" target="_blank" rel="noreferrer">開啟 →</a>
+            </div>
+          </article>
+
+          <!-- 精選 5 -->
+          <article class="card">
+            <div class="thumb">替換縮圖 9:16</div>
+            <div class="card-body">
+              <p class="title">餐飲 IP 口播短影音剪輯｜TikTok（早午餐店）</p>
+              <div class="tags">
+                <span class="tag">TikTok</span><span class="tag">口播</span><span class="tag">故事結構</span>
+              </div>
+              <a class="open" href="https://www.tiktok.com/@vanessa05188/video/7665604560664251669" target="_blank" rel="noreferrer">開啟 →</a>
+            </div>
+          </article>
+
+          <!-- 精選 6 -->
+          <article class="card">
+            <div class="thumb">替換縮圖 9:16</div>
+            <div class="card-body">
+              <p class="title">生活口播短影音剪輯｜Reels（IG）</p>
+              <div class="tags">
+                <span class="tag">IG</span><span class="tag">口播</span><span class="tag">字幕</span>
+              </div>
+              <a class="open" href="https://www.instagram.com/reel/Dbs74gVB_YH/" target="_blank" rel="noreferrer">開啟 →</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="services">
+        <div class="sec-title">
+          <div>
+            <h2>服務內容</h2>
+            <p class="sub">針對店家/品牌，把商品與服務資訊剪成「好懂、有節奏、能帶行動」的短影音。</p>
+          </div>
+        </div>
+
+        <div class="two">
+          <div class="list">
+            <strong>我可以協助你：</strong>
+            <ul>
+              <li><b>短影音剪輯</b>（Reels / TikTok / Shorts）：節奏剪輯、重點鋪陳、畫面切鏡整理</li>
+              <li><b>前 3 秒 Hook 設計</b>：痛點/利益點切入，提升停留與完播</li>
+              <li><b>字幕與字卡版型一致化</b>：資訊分層、關鍵字強調，讓內容更好吸收</li>
+              <li><b>音效與配樂節奏</b>：情緒與節奏點加強，提升整體質感</li>
+              <li><b>多平台交付</b>：9:16 / 1:1 / 16:9（依上架平台輸出）</li>
+            </ul>
+          </div>
+          <div class="list">
+            <strong>適合的合作對象：</strong>
+            <ul>
+              <li>店家想固定週更/月更短影音</li>
+              <li>品牌需要一致的字幕字卡與影片風格</li>
+              <li>有拍攝素材但沒時間剪／剪不出節奏</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="process">
+        <div class="sec-title">
+          <div>
+            <h2>合作流程</h2>
+            <p class="sub">三步驟完成：素材 → 試剪/對齊 → 穩定交付。</p>
+          </div>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="n">1</div>
+            <strong>需求確認</strong>
+            <div class="hint">你提供：素材連結、賣點、目標平台、預計頻率、參考風格。</div>
+          </div>
+          <div class="step">
+            <div class="n">2</div>
+            <strong>試剪 1 支 / 風格對齊</strong>
+            <div class="hint">先確認節奏、字幕密度、字卡風格與品牌語氣。</div>
+          </div>
+          <div class="step">
+            <div class="n">3</div>
+            <strong>固定交付與迭代</strong>
+            <div class="hint">一般案件 1 個工作天內交付（依素材完整度與片量調整）。</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="all-works">
+        <div class="sec-title">
+          <div>
+            <h2>全部作品（目前 8 + 作品庫）</h2>
+            <p class="sub">你之後補到 12 支，我也可以幫你重新排序與貼標籤。</p>
+          </div>
+        </div>
+
+        <div class="grid">
+          <article class="card"><div class="thumb">縮圖</div><div class="card-body"><p class="title">美業口播短影音剪輯｜TikTok</p><div class="tags"><span class="tag">TikTok</span><span class="tag">口播</span><span class="tag">Hook</span></div><a class="open" href="https://vt.tiktok.com/ZSHsgCjABXG39-3Ea9X/" target="_blank" rel="noreferrer">開啟 →</a></div></article>
+          <article class="card"><div class="thumb">縮圖</div><div class="card-body"><p class="title">美業口播短影音剪輯（案例）｜TikTok</p><div class="tags"><span class="tag">TikTok</span><span class="tag">口播</span><span class="tag">字幕</span></div><a class="open" href="https://www.tiktok.com/@sallyhu.health/video/7660549815209643285" target="_blank" rel="noreferrer">開啟 →</a></div></article>
+          <article class="card"><div class="thumb">縮圖</div><div class="card-body"><p class="title">生活 IP 口播短影音剪輯｜Reels（IG）</p><div class="tags"><span class="tag">IG</span><span class="tag">口播</span><span class="tag">故事結構</span></div><a class="open" href="https://www.instagram.com/reel/DK9cjhXSGfI/" target="_blank" rel="noreferrer">開啟 →</a></div></article>
+          <article class="card"><div class="thumb">縮圖</div><div class="card-body"><p class="title">重機口播短影音剪輯｜Reels（IG）</p><div class="tags"><span class="tag">IG</span><span class="tag">口播</span><span class="tag">節奏</span></div><a class="open" href="https://www.instagram.com/reel/DPDytrTD6bH/" target="_blank" rel="noreferrer">開啟 →</a></div></article>
+          <article class="card"><div class="thumb">縮圖</div><div class="card-body"><p class="title">餐飲 IP 口播短影音剪輯｜TikTok（早午餐店）</p><div class="tags"><span class="tag">TikTok</span><span class="tag">口播</span><span class="tag">故事結構</span></div><a class="open" href="https://www.tiktok.com/@vanessa05188/video/7665604560664251669" target="_blank" rel="noreferrer">開啟 →</a></div></article>
+          <article class="card"><div class="thumb">縮圖</div><div class="card-body"><p class="title">生活口播短影音剪輯｜Reels（IG）</p><div class="tags"><span class="tag">IG</span><span class="tag">口播</span><span class="tag">字幕</span></div><a class="open" href="https://www.instagram.com/reel/Dbs74gVB_YH/" target="_blank" rel="noreferrer">開啟 →</a></div></article>
+          <article class="card"><div class="thumb">縮圖</div><div class="card-body"><p class="title">家居/床墊 IP 口播短影音剪輯｜TikTok</p><div class="tags"><span class="tag">TikTok</span><span class="tag">口播</span><span class="tag">Hook</span></div><a class="open" href="https://www.tiktok.com/@mattress_1111_/video/7542868518019075349" target="_blank" rel="noreferrer">開啟 →</a></div></article>
+          <article class="card"><div class="thumb">縮圖</div><div class="card-body"><p class="title">口播短影音剪輯｜Reels（IG）</p><div class="tags"><span class="tag">IG</span><span class="tag">口播</span><span class="tag">節奏</span></div><a class="open" href="https://www.instagram.com/reel/DT2tYHtgOFQ/" target="_blank" rel="noreferrer">開啟 →</a></div></article>
+
+          <!-- Google Drive 作品庫卡（固定放最後） -->
+          <article class="card">
+            <div class="thumb">作品庫</div>
+            <div class="card-body">
+              <p class="title">其他作品庫｜Google Drive</p>
+              <div class="tags">
+                <span class="tag">Drive</span><span class="tag">活動/長影音</span><span class="tag">更多作品</span>
+              </div>
+              <a class="open" href="https://drive.google.com/drive/u/0/folders/1jtSUldMDhhBQk3WVBvq_z5_OIVOejZXq" target="_blank" rel="noreferrer">前往查看 →</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="sec-title">
+          <div>
+            <h2>聯絡合作</h2>
+            <p class="sub">你提供素材與需求，我依品牌語氣剪出可上架的短影音版本。</p>
+          </div>
+        </div>
+
+        <div class="two">
+          <div class="list">
+            <strong>私訊時請先提供：</strong>
+            <ul>
+              <li><b>素材檔案</b>：手機拍攝影片 / 相片 / 產品 B-roll（雲端連結）</li>
+              <li><b>你要推的重點</b>：賣點、活動資訊、想導到的行動（私訊/下單/預約）</li>
+              <li><b>目標平台</b>：IG Reels / TikTok / Shorts（可多選）</li>
+              <li><b>預計片長與數量</b>：例如 30–60 秒、一次 4 支</li>
+              <li><b>參考風格</b>：1–3 個你喜歡的影片連結</li>
+            </ul>
+          </div>
+          <div class="list">
+            <strong>快速開始</strong>
+            <p class="hint">點下方按鈕直接到 IG 私訊。</p>
+            <div class="btns" style="margin-top:12px">
+              <a class="btn primary" href="https://www.instagram.com/lovenaga_ado/" target="_blank" rel="noreferrer">IG 私訊合作</a>
+              <a class="btn secondary" href="#top">回到頂部</a>
+            </div>
+            <p class="hint">常見問題：不會拍也可以，先用手機拍日常素材，我會回覆補拍建議。</p>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        © <span id="y"></span> 建宇 任｜短影音剪輯作品集　・　IG：@lovenaga_ado
+      </footer>
+    </main>
+  </div>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear()
+  </script>
+</body>
+</html>
